@@ -1,0 +1,36 @@
+<div class="row image-spacing">
+    <img [src]="singlePost?.img">
+</div>
+
+<div class="row">
+    <div class="column text-left">
+        <a class="back-link" [routerLink]="['']">    
+            <h4>Go Back</h4>
+        </a>
+    </div>
+</div>
+
+<div class="row post-title">
+    <div class="column text-center">
+        <h2>{{singlePost?.title}}</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="column text-justified">
+        <p>{{singlePost?.content}}</p>
+    </div>
+</div>
+
+<div class="portfolio identity wedding" data-cat="wedding" href="#portfolioModal1" data-toggle="modal">
+    <div class="portfolio-wrapper">
+        <img [src]="singlePost?.img">
+        <div class="caption">
+            <div class="caption-text">
+                <a class="text-title">Wedding</a>
+                <span class="text-category">Arrowhead, CA</span>
+            </div>
+            <div class="caption-bg"></div>
+        </div>
+    </div>
+</div>
