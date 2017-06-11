@@ -13,6 +13,11 @@ export class BlogAddComponent {
     imageSRC: string;
     postTitle: string;
     content: string;
+    location: string;
+    host: string;
+    tags: string;
+    category: string;
+    imgDesc: string;
     post: Blog;    
 
     constructor( private blogAdminSVC: BlogAdminService, private router: Router  ){}
@@ -33,8 +38,13 @@ export class BlogAddComponent {
         this.post = new Blog ( 
             this.postTitle, 
             this.content, 
+            this.location,
+            this.host,
+            this.tags,
+            this.category,
             this.imgTitle, 
-            this.imageSRC.substring(23) 
+            this.imageSRC.substring(23),
+            this.imgDesc 
         );
         this.blogAdminSVC.createPost(this.post);
         alert(`${this.postTitle} added to posts`);
