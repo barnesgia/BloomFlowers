@@ -16,12 +16,11 @@ export class UserService implements CanActivate {
 
     constructor( private router: Router ) {
         firebase.initializeApp({
-        apiKey: "AIzaSyASukiZJOnpVmp5HDU627oj2VtG0E7SPVA",
-        authDomain: "bloomflowersandevents-f546f.firebaseapp.com",
-        databaseURL: "https://bloomflowersandevents-f546f.firebaseio.com",
-        projectId: "bloomflowersandevents-f546f",
-        storageBucket: "bloomflowersandevents-f546f.appspot.com",
-        messagingSenderId: "431059185386"
+        apiKey: "API Key goes here",
+        authDomain: "Auth Domain info goes here",
+        databaseURL: "Database URL goes here",
+        storageBucket: "Storage bucket goes here",
+        messagingSenderId: "Message sende ID goes here"
         })
      }
 

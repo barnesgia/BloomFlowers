@@ -7,21 +7,56 @@
 <form>
     <div class="row">
         <div class="small-12 medium-6 columns">
-            <label>Post Title
+            <label>Title
             <input type="text" [(ngModel)]="postTitle" name="postTitle" required #psTitle="ngModel">
             </label>
         </div>
     </div>
     <div class="row">
+        <div class="small-12 medium-6 columns">
+            <label>Location
+            <input type="text" [(ngModel)]="location" name="location" required #location="ngModel">
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 medium-6 columns">
+            <label>Hosts
+            <input type="text" [(ngModel)]="host" name="host" required #host="ngModel">
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 medium-6 columns">
+            <label>Tags
+            <input type="text" [(ngModel)]="tags" name="tags" required #tags="ngModel">
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 medium-6 columns">
+            <label>Category
+            <input type="text" [(ngModel)]="category" name="category" required #category="ngModel">
+            </label>
+        </div>
+    </div>
+    <div class="row">
         <div class="small-12 medium-6 columns"> 
-            <label>Post Content
-            <textarea rows="15" id="content" [(ngModel)]="content" name="content" required #psContent="ngModel">
+            <label>Post Content/Description
+            <textarea rows="5" id="content" [(ngModel)]="content" name="content" required #psContent="ngModel">
             </textarea>
             </label>
         </div>
         <div class="small-12 medium-6 columns"> 
             <input type="file" (change)="fileLoad($event)"><br>
             <img *ngIf = "imageSRC" [src] = "imageSRC" alt="Image preview...">
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 medium-6 columns">
+            <label>Image Description
+            <input type="text" [(ngModel)]="imgDesc" name="imgDesc" required #imgDesc="ngModel">
+            </label>
         </div>
     </div>
     <div class="row align-center">

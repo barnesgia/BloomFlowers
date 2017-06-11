@@ -16,8 +16,13 @@ export class BlogAdminService {
                 newPost.set ({
                     title: post.title,
                     content: post.content,
+                    location: post.location,
+                    host: post.host,
+                    tags: post.tags,
+                    category: post.category,
                     imgTitle: post.imgTitle,
                     img: url,
+                    imgDesc: post.imgDesc,
                     id: newPost.key
                 });         
             })
@@ -30,7 +35,12 @@ export class BlogAdminService {
         let dbRef = firebase.database().ref('blogPosts/').child(update.id)
             .update({
                 title: update.title,
-                content: update.content
+                content: update.content,
+                location: update.location,
+                host: update.host,
+                tags: update.tags,
+                category: update.category,
+                imgDesc: update.imgDesc
             });
         alert('post updated');       
     }
